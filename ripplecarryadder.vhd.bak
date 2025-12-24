@@ -1,0 +1,51 @@
+-- Ripple Carry Adder using Full Adder (4 Bit)
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ripplecarryadder is  
+
+port(
+	A0, A1, A2, A3 : in std_logic;
+	B0, B1, B2, B3 : in std_logic;
+	Cin : in std_logic;
+	S0, S1, S2, S3 : out std_logic;
+	Cout : out std_logic;
+);
+
+end ripplecarryadder;
+
+architecture RCA of ripplecarryadder is 
+
+	component fulladder
+	port(
+		A, B, Cin : in std_logic;
+		Cout, Sum : out std_logic
+	    );
+	end component;
+
+	signal Cout0: std_logic;
+	signal Cout1: std_logic;
+	signal Cout2: std_logic;
+
+begin 
+	FA1: fulladder
+	port map(
+		A0 => A,
+		B0 => B,
+		Cin => s1,
+		D => c1
+	);
+	
+	HA2: halfadder
+	port map(
+		A => s1,
+		B => Cin,
+		C => Sum,
+		D => c2
+	);
+
+	Cout <= c1 or c2;
+
+
+end FA;

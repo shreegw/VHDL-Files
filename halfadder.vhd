@@ -1,0 +1,20 @@
+-- half adder
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity halfadder is 
+port (
+	A, B : in std_logic; 
+	C, D : out std_logic
+);
+end halfadder;
+
+architecture HA of halfadder is 
+
+begin 
+
+	C <= A xor B;
+	D <= A and B;
+
+end HA;
