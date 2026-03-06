@@ -39,19 +39,19 @@ stim_proc : process
 begin
 A_tb <= '0'; B_tb <= '0'; Cin_tb <= '0'; wait for 10 ns;
 
-A_tb<= '0'; B_tb <= '1'; Cin_tb <= '0'; wait for 10 ns;
+A_tb <= '0'; B_tb <= '1'; Cin_tb <= '0'; wait for 10 ns;
 
-A_tb<= '1'; B_tb <= '0'; Cin_tb <= '0'; wait for 10 ns;
+A_tb <= '1'; B_tb <= '0'; Cin_tb <= '0'; wait for 10 ns;
 
-A_tb<= '1'; B_tb <= '1'; Cin_tb <= '0'; wait for 10 ns;
+A_tb <= '1'; B_tb <= '1'; Cin_tb <= '0'; wait for 10 ns;
 
 A_tb <= '0'; B_tb <= '0'; Cin_tb <= '1'; wait for 10 ns;
 
-A_tb<= '0'; B_tb <= '1'; Cin_tb <= '1'; wait for 10 ns;
+A_tb <= '0'; B_tb <= '1'; Cin_tb <= '1'; wait for 10 ns;
 
-A_tb<= '1'; B_tb <= '0'; Cin_tb <= '1'; wait for 10 ns;
+A_tb <= '1'; B_tb <= '0'; Cin_tb <= '1'; wait for 10 ns;
 
-A_tb<= '1'; B_tb <= '1'; Cin_tb <= '1'; wait for 10 ns;
+A_tb <= '1'; B_tb <= '1'; Cin_tb <= '1'; wait for 10 ns;
 
 wait;
 
